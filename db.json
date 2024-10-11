@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Karim",
+      "lastName": "Benzema",
+      "age": "33",
+      "active": false
+    },
+    {
+      "id": "3",
+      "firstName": "Toni",
+      "lastName": "Kroos",
+      "age": "31",
+      "active": true
+    },
+    {
+      "id": "4",
+      "firstName": "Sergio",
+      "lastName": "Ramos",
+      "age": "35",
+      "active": false
+    },
+    {
+      "id": "5",
+      "firstName": "Eden",
+      "lastName": "Hazard",
+      "age": "30",
+      "active": true
+    }
+  ]
+}
