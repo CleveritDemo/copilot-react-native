@@ -6,14 +6,18 @@ import { User } from "../types";
 
 export default function Index() {
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
     try {
+      setLoading(true);
       const response = await fetch("http://192.168.100.24:3000/users");
       const result = await response.json();
       setData(result);
     } catch (error) {
       console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -38,6 +42,8 @@ export default function Index() {
           data={data}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
+          refreshing={loading}
+          onRefresh={fetchData}
         />
       ) : (
         <View style={styles.loadingContainer}>
