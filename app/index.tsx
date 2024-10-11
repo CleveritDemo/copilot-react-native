@@ -1,12 +1,13 @@
 // FILE: index.tsx
 import React, { useEffect, useState } from "react";
-import { SafeAreaView, FlatList, View, Text, StyleSheet } from "react-native";
+import { SafeAreaView, FlatList, View, Text, StyleSheet, Switch } from "react-native";
 import UserCard from "../components/UserCard"; // Ensure the path is correct
 import useStore from "../store";
 import { User } from "../types";
 
 export default function Index() {
   const [loading, setLoading] = useState(true);
+  const [activeOnly, setActiveOnly] = useState(false);
   const users = useStore((state) => state.users);
   const setUsers = useStore((state) => state.setUsers);
 
@@ -27,6 +28,8 @@ export default function Index() {
     fetchData();
   }, []);
 
+  const filteredUsers = activeOnly ? users.filter((user) => user.active) : users;
+
   const renderItem = ({ item }: { item: User }) => (
     <UserCard
       id={item.id}
@@ -39,9 +42,13 @@ export default function Index() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {users.length > 0 ? (
+      <View style={styles.switchContainer}>
+        <Text>Active Only</Text>
+        <Switch value={activeOnly} onValueChange={setActiveOnly} />
+      </View>
+      {filteredUsers.length > 0 ? (
         <FlatList
-          data={users}
+          data={filteredUsers}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
           refreshing={loading}
@@ -66,5 +73,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+  },
+  switchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
   },
 });
