@@ -1,19 +1,21 @@
+// FILE: index.tsx
 import React, { useEffect, useState } from "react";
 import { SafeAreaView, FlatList, View, Text, StyleSheet } from "react-native";
 import UserCard from "../components/UserCard"; // Ensure the path is correct
+import useStore from "../store";
 import { User } from "../types";
 
-
 export default function Index() {
-  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const users = useStore((state) => state.users);
+  const setUsers = useStore((state) => state.setUsers);
 
   const fetchData = async () => {
     try {
       setLoading(true);
       const response = await fetch("http://192.168.100.24:3000/users");
       const result = await response.json();
-      setData(result);
+      setUsers(result);
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
@@ -37,9 +39,9 @@ export default function Index() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {data ? (
+      {users.length > 0 ? (
         <FlatList
-          data={data}
+          data={users}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
           refreshing={loading}

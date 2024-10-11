@@ -2,6 +2,7 @@
 import { User } from '@/types';
 import React from 'react';
 import { View, Text, StyleSheet, Pressable, Alert } from 'react-native';
+import useStore from '../store';
 
 interface UserCardProps {
   id: string;
@@ -12,6 +13,8 @@ interface UserCardProps {
 }
 
 const UserCard: React.FC<UserCardProps> = (user: User) => {
+  const toggleUserActive = useStore((state) => state.toggleUserActive);
+
   const toggleActiveStatus = async () => {
     try {
       const response = await fetch(`http://192.168.100.24:3000/users/${user.id}`, {
@@ -23,6 +26,7 @@ const UserCard: React.FC<UserCardProps> = (user: User) => {
       });
 
       if (response.ok) {
+        toggleUserActive(user.id);
         Alert.alert('Success', 'User status updated successfully');
       } else {
         Alert.alert('Error', 'Failed to update user status');
