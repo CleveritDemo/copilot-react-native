@@ -1,14 +1,6 @@
 {
   "users": [
     {
-      "active": true,
-      "id": "1"
-    },
-    {
-      "active": false,
-      "id": "2"
-    },
-    {
       "id": "3",
       "firstName": "Sergio",
       "lastName": "Ramos",
@@ -20,20 +12,13 @@
       "firstName": "Toni",
       "lastName": "Kroos",
       "age": "31",
-      "active": true
+      "active": false
     },
     {
       "id": "5",
       "firstName": "Eden",
       "lastName": "Hazard",
       "age": "30",
-      "active": true
-    },
-    {
-      "id": "123",
-      "firstName": "Enzo",
-      "lastName": "Aliatis",
-      "age": "9",
       "active": true
     }
   ]

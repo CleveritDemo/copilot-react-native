@@ -32,8 +32,47 @@ const UserCard: React.FC<UserCardProps> = (user: User) => {
     }
   };
 
+  const handleLongPress = () => {
+    Alert.alert(
+      'Confirm Deletion',
+      'Are you sure to delete the element?',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: 'Yes',
+          onPress: async () => {
+            try {
+              const response = await fetch(`http://192.168.100.24:3000/users/${user.id}`, {
+                method: 'DELETE',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+              });
+
+              if (response.ok) {
+                Alert.alert('Success', 'User deleted successfully');
+              } else {
+                Alert.alert('Error', 'Failed to delete user');
+              }
+            } catch (error) {
+              Alert.alert('Error', 'An error occurred');
+            }
+          },
+        },
+      ],
+      { cancelable: true }
+    );
+  };
+
   return (
-    <Pressable onPress={toggleActiveStatus} style={({ pressed }) => [styles.card, pressed && styles.pressed]}>
+    <Pressable
+      onPress={toggleActiveStatus}
+      onLongPress={handleLongPress}
+      style={({ pressed }) => [styles.card, pressed && styles.pressed]}
+    >
       <Text style={styles.id}>ID: {user.id}</Text>
       <Text style={styles.fullName}>Full Name: {user.firstName} {user.lastName}</Text>
       <Text style={styles.age}>Age: {user.age}</Text>
