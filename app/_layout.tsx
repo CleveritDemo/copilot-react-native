@@ -23,6 +23,15 @@ export default function RootLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="enroll"
+        options={{
+          title: 'Enroll',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'person-add' : 'person-add-outline'} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
