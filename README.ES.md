@@ -427,7 +427,7 @@ Para crear un nuevo elemento de menú de pestañas llamado "enroll", necesitas s
 
 2. **Actualizar el diseño de la pestaña**: Actualiza el archivo `_layout.tsx` en la carpeta `tabs` para incluir la nueva pestaña "enroll".
 
-### Paso 1: Crear la pantalla de inscripción
+Paso 1: Crear la pantalla de inscripción
 Crea un nuevo archivo llamado `enroll.tsx` en la carpeta `tabs`:
 
 ```tsx
@@ -1278,7 +1278,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-## Paso 14: Crear Prueba
+## Paso 14: Crear Prueba (Unit Test)
 
 ### Probar el componente UserCard
 👤 Prompt:
