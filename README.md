@@ -5,8 +5,6 @@ Development of an app in React Native using GitHub Copilot
 Demonstrate the impact of GitHub Copilot in enhancing agility and accelerating the development process within a React Native project. Highlight how Copilot can efficiently generate key components and provide intelligent suggestions for libraries that can help address specific challenges.
 
 # ✅ Specific Objectives:
-&check; Create a React Native (Expo) project from scratch with the help of GitHub Copilot. Demonstrate how Copilot simplifies the setup process, guiding you through the creation of a new React Native project using Expo, and streamlining initial configurations.   
-
 &check; Build a functional CRUD application to create, read, update, and delete data from an API with the assistance of GitHub Copilot. Show how Copilot enhances the development process by generating files that simulate a database or by offering intelligent recommendations on the best libraries to use for specific tasks.
 
 &check; Write and execute tests with the help of GitHub Copilot. Highlight how Copilot facilitates the creation of unit tests, ensuring code reliability and correctness, while streamlining the overall testing process.
@@ -37,36 +35,9 @@ Demonstrate the impact of GitHub Copilot in enhancing agility and accelerating t
 > [!IMPORTANT]  
 > Throughout the tutorial, we will use an Android device with Windows 10.
 
-
 # 🦾 Let's code
 
-## Setup Proyect
-### Step 1. Create a React-Native (Expo) Project using GitHub Copilot
-Open VS Code and go to Github Copilot Chat
-
-👤 Prompt:
-`How can I initialize a new React Native project using Expo and npx?`
-
-🤖 Copilot Answer:
-Create a New Project: Use the `npx create-expo-app` command to create a new project. 
-
-You will be prompted to choose a template.
-`npx create-expo-app my-new-project`
-
-Navigate to Project Directory: Change into the newly created project directory.
-`cd my-new-project`
-
-Start the Development Server: Start the Expo development server.
-`npx expo start`
-
-This will open the Expo Developer Tools in your browser, where you can run your app on an emulator, simulator, or physical device
-
-```bash
-cd my-new-project
-npx expo start
-```
-
-### Step 2. Connect your device with the dev environment
+### Step 1. Connect your device with the dev environment (Optional)
 - Device:
   - Open Expo Go
 - PC:
@@ -74,7 +45,7 @@ npx expo start
 
 You should see Expo building the app in the console on your PC, and then the Expo app will appear on your device.
 
-### Step 3. Delete unnecessary code.
+### Step 2. Delete unnecessary code.
 
 👤 Prompt:
 `@workspace read the #file:package.json and tell me if there some command to reset-project and how run the command`
@@ -91,7 +62,7 @@ To run the command, use the following in your terminal:
 
 
 ## Setup REST API
-### Step 4. Create a mock data
+### Step 3. Create a mock data
 👤 Prompt:
 `@workspace /new Create a file named db.json at the root of the project. This file should contain a key called users, and users should be an array of elements with the following fields: id, firstName, lastName, age, and a boolean field to indicate whether they are active. Use data from Real Madrid football players for the information, all fields must be of type string exept active, active must be boolean`
 
@@ -140,7 +111,7 @@ Here is the content for the db.json file with data from Real Madrid football pla
 }
 ```
 
-### Step 5. Create a mock Server
+### Step 4. Create a mock Server
 
 👤 Prompt:
 `@workspace Read #file:db.json and recommend me a JS library that allows me to create a REST API from the db.json. add the script to run the server in #file:package.json`
@@ -167,7 +138,7 @@ Example Usage:
 - Delete a user: DELETE http://localhost:3000/users/1
 
 ## Read data (R)
-### Step 6. Create a bottom tab menu called HOME
+### Step 5. Create a bottom tab menu called HOME
 👤 Prompt:
 `How can I create a new tab called home in /app folder, use the #file:index.tsx as the page of the tab`
 
@@ -212,7 +183,7 @@ export default function TabLayout() {
 With these steps, you will have a new tab called "Home" in the /app folder, and the index.tsx file will be used as the page for this tab. The Home tab will display the content defined in index.tsx.
 
 
-### Step 7. Create data interface
+### Step 6. Create data interface
 👤 Prompt:
 `@workspace /new Read the #file:db.json  create a file named types.ts and create an interface with the data in db.json`
 
@@ -221,7 +192,7 @@ Sure, here is the file you requested:
 `types.ts`
 
 
-### Step 8. Display data from REST API
+### Step 7. Display data from REST API
 
 👤 Prompt:
 Create a function in #file:index.tsx  that performs a GET request to the URL `localhost:3000/user` to store the data in a variable then display the data on the screen, use fetch.
@@ -419,7 +390,7 @@ const styles = StyleSheet.create({
 
 ## Create Data (C)
 
-### Step 9: Create another tab with a form to submit data to the REST API.
+### Step 8: Create another tab with a form to submit data to the REST API.
 
 👤 Prompt:
 `@workspace Show me how to create a new tab called enrrol`
@@ -643,7 +614,7 @@ const styles = StyleSheet.create({
 
 ## Update data (U)
 
-### Step 10: Update an element in the list.
+### Step 9: Update an element in the list.
 
 👤 Prompt:
 `@workspace  in the file UserCard.tsx add a function that when the user Press the card send an http call to the api with put method in order to toggle the active field, use Presseable RN component`
@@ -743,7 +714,7 @@ export default UserCard;
 In this code, the toggleActiveStatus function sends a PUT request to the API to toggle the active status of the user. The Pressable component is used to handle the press event on the card. When the card is pressed, the toggleActiveStatus function is called.
 
 ## Delete data (D)
-### Step 11. Delete an element in the list
+### Step 10. Delete an element in the list
 👤 Prompt:
 `@workspace in the file UserCard.tsx add a function that when the user PressLong the card show an alert asking "are you sure to delete the element?", if yes send an http call to the api with delete method, use Presseable RN component`
 
@@ -875,7 +846,7 @@ export default UserCard;
 
 In this code, the handleLongPress function shows an alert asking for confirmation to delete the user. If the user confirms, it sends a DELETE request to the API to delete the user. The Pressable component is used to handle both the press and long press events on the card.
 
-## Step 12: Add State Management
+## Step 11: Add State Management
 
 👤 Prompt:
 `Recommend me a lightweight, powerful and popular state manager that works in react native`
@@ -1182,7 +1153,7 @@ export default UserCard;
 
 ```
 
-## Step 13: Create Filter
+## Step 12: Create Filter
 👤 Prompt:
 `@workspace Create a switch with label "Active Only" in the #file:index.tsx and a function to filter users by active field`
 
@@ -1278,7 +1249,7 @@ const styles = StyleSheet.create({
 ```
 
 
-## Step 14: Create Test
+## Step 13: Create Test
 
 ### Test UserCard component
 👤 Prompt:

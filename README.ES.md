@@ -5,7 +5,6 @@ Desarrollo de una aplicación en React Native utilizando GitHub Copilot
 Demostrar el impacto de GitHub Copilot en la mejora de la agilidad y la aceleración del proceso de desarrollo dentro de un proyecto de React Native. Resaltar cómo Copilot puede generar eficientemente componentes clave y proporcionar sugerencias inteligentes para bibliotecas que ayuden a abordar desafíos específicos.
 
 # ✅ Objetivos Específicos:
-✓ Crear un proyecto en React Native (Expo) desde cero con la ayuda de GitHub Copilot. Demostrar cómo Copilot simplifica el proceso de configuración, guiándote en la creación de un nuevo proyecto de React Native usando Expo, y agilizando las configuraciones iniciales.
 
 ✓ Construir una aplicación CRUD funcional para crear, leer, actualizar y eliminar datos de una API con la asistencia de GitHub Copilot. Mostrar cómo Copilot mejora el proceso de desarrollo generando archivos que simulan una base de datos o proporcionando recomendaciones inteligentes sobre las mejores bibliotecas a usar para tareas específicas.
 
@@ -39,33 +38,7 @@ Demostrar el impacto de GitHub Copilot en la mejora de la agilidad y la acelerac
 
 # 🦾 Vamos a codificar
 
-## Configuración del Proyecto  
-### Paso 1. Crear un Proyecto React-Native (Expo) utilizando GitHub Copilot  
-Abre VS Code y ve a GitHub Copilot Chat.
-
-👤 Prompt:  
-`¿Cómo puedo inicializar un nuevo proyecto de React Native usando Expo y npx?`
-
-🤖 Respuesta de Copilot:  
-Crea un Nuevo Proyecto: Usa el comando `npx create-expo-app` para crear un nuevo proyecto.
-
-Se te pedirá que elijas una plantilla.  
-`npx create-expo-app my-new-project`
-
-Navegar al Directorio del Proyecto: Cambia al directorio del proyecto recién creado.  
-`cd my-new-project`
-
-Iniciar el Servidor de Desarrollo: Inicia el servidor de desarrollo de Expo.  
-`npx expo start`
-
-Esto abrirá las herramientas de desarrollo de Expo en tu navegador, donde podrás ejecutar tu aplicación en un emulador, simulador o dispositivo físico.
-
-```bash
-cd my-new-project
-npx expo start
-```
-
-### Paso 2. Conectar tu dispositivo con el entorno de desarrollo  
+### Paso 1. Conectar tu dispositivo con el entorno de desarrollo (Opcional)
 - Dispositivo:  
   - Abre Expo Go  
 - PC:  
@@ -74,7 +47,7 @@ npx expo start
 Deberías ver cómo Expo construye la aplicación en la consola de tu PC, y luego la aplicación de Expo aparecerá en tu dispositivo.
 
 
-### Paso 3. Eliminar código innecesario.
+### Paso 2. Eliminar código innecesario.
 
 👤 Prompt:  
 `@workspace lee el archivo #file:package.json y dime si hay algún comando para resetear el proyecto y cómo ejecutar el comando`
@@ -91,7 +64,7 @@ Para ejecutar el comando, utiliza lo siguiente en tu terminal:
 `npm run reset-project`
 
 ## Configuración de la API REST  
-### Paso 4. Crear datos simulados  
+### Paso 3. Crear datos simulados  
 👤 Prompt:  
 `@workspace /new Crea un archivo llamado db.json en la raíz del proyecto. Este archivo debe contener una clave llamada users, y users debe ser un array de elementos con los siguientes campos: id, firstName, lastName, age y un campo booleano para indicar si están activos. Usa datos de los jugadores de fútbol del Real Madrid para la información, todos los campos deben ser de tipo cadena excepto active, active debe ser booleano.`
 
@@ -140,7 +113,7 @@ Aquí está el contenido para el archivo db.json con datos de los jugadores de f
 }
 ```
 
-### Paso 5. Crear un Servidor Simulado
+### Paso 4. Crear un Servidor Simulado
 
 👤 Prompt:  
 `@workspace Lee el archivo #file:db.json y recomiéndame una biblioteca de JS que me permita crear una API REST a partir del db.json. Agrega el script para ejecutar el servidor en el archivo #file:package.json.`
@@ -167,7 +140,7 @@ Ejemplo de uso:
 - Eliminar un usuario: DELETE http://localhost:3000/users/1  
 
 ## Leer datos (R)  
-### Paso 6. Crear un menú de pestañas inferior llamado INICIO  
+### Paso 5. Crear un menú de pestañas inferior llamado INICIO  
 
 👤 Prompt:  
 `¿Cómo puedo crear una nueva pestaña llamada inicio en la carpeta /app, usando el archivo #file:index.tsx como la página de la pestaña?`
@@ -212,7 +185,7 @@ export default function TabLayout() {
 ```
 Con estos pasos, tendrás una nueva pestaña llamada "Inicio" en la carpeta /app, y el archivo index.tsx se utilizará como la página para esta pestaña. La pestaña de Inicio mostrará el contenido definido en index.tsx.
 
-### Paso 7. Crear una interfaz de datos  
+### Paso 6. Crear una interfaz de datos  
 👤 Prompt:  
 `@workspace /new Lee el archivo #file:db.json y crea un archivo llamado types.ts y crea una interfaz con los datos en db.json.`
 
@@ -221,7 +194,7 @@ Claro, aquí está el archivo que solicitaste:
 `types.ts`
 
 
-### Paso 8. Mostrar datos desde la API REST  
+### Paso 7. Mostrar datos desde la API REST  
 
 👤 Prompt:  
 Crea una función en el archivo #file:index.tsx que realice una solicitud GET a la URL `localhost:3000/user` para almacenar los datos en una variable y luego mostrar los datos en la pantalla, usa fetch.
@@ -415,7 +388,7 @@ const styles = StyleSheet.create({
 
 ## Crear Datos (C)
 
-### Paso 9: Crear otra pestaña con un formulario para enviar datos a la API REST.
+### Paso 8: Crear otra pestaña con un formulario para enviar datos a la API REST.
 
 👤 Prompt:  
 `@workspace Muéstrame cómo crear una nueva pestaña llamada "enroll"`
@@ -637,7 +610,7 @@ const styles = StyleSheet.create({
 
 ## Actualizar datos (U)
 
-### Paso 10: Actualizar un elemento en la lista.
+### Paso 9: Actualizar un elemento en la lista.
 
 👤 Prompt:
 `@workspace en el archivo UserCard.tsx agrega una función que, cuando el usuario presione la tarjeta, envíe una llamada HTTP a la API con el método PUT para alternar el campo activo, usa el componente Pressable de RN`
@@ -739,7 +712,7 @@ En este código, la función `toggleActiveStatus` envía una solicitud PUT a la 
 
 
 ## Eliminar datos (D)
-### Paso 11. Eliminar un elemento de la lista
+### Paso 10. Eliminar un elemento de la lista
 👤 Prompt:
 `@workspace en el archivo UserCard.tsx añade una función que, cuando el usuario mantenga presionada la tarjeta, muestre una alerta preguntando "¿estás seguro de eliminar el elemento?", si es así, envía una llamada HTTP a la API con el método DELETE, utiliza el componente Pressable de RN`
 
@@ -872,7 +845,7 @@ export default UserCard;
 En este código, la función handleLongPress muestra una alerta pidiendo confirmación para eliminar al usuario. Si el usuario confirma, envía una solicitud DELETE a la API para eliminar al usuario. El componente Pressable se utiliza para manejar tanto los eventos de presión como de presión prolongada en la tarjeta.
 
 
-## Paso 12: Agregar Manejo de Estado
+## Paso 11: Agregar Manejo de Estado
 
 👤 Prompt:
 `Recomiéndame un gestor de estado ligero, potente y popular que funcione en React Native`
@@ -1181,7 +1154,7 @@ export default UserCard;
 
 ```
 
-## Paso 13: Crear Filtro
+## Paso 12: Crear Filtro
 
 👤 Prompt:
 `@workspace Crea un interruptor con la etiqueta "Solo Activos" en el #file:index.tsx y una función para filtrar usuarios por el campo activo`
@@ -1278,7 +1251,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-## Paso 14: Crear Prueba (Unit Test)
+## Paso 13: Crear Prueba (Unit Test)
 
 ### Probar el componente UserCard
 👤 Prompt:
