@@ -32,7 +32,7 @@ Demonstrate the impact of GitHub Copilot in enhancing agility and accelerating t
 - Software:
   - Node.js LTS version recommended
   - **Expo CLI:** `npm install -g expo-cli`
-  - Phone Link installed on PC (Windows) (To share the mobile display on PC)
+  - Android Studio to run the Android emulator or Phone Link installed on PC (Windows), to share the mobile screen on PC - Required for presentation purposes and optional for attendees.
 
 > [!WARNING]  
 > If you are using Windows Subsystem for Linux (WSL2), use Windows PowerShell directly.
