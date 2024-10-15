@@ -40,6 +40,10 @@ Demostrar el impacto de GitHub Copilot en la mejora de la agilidad y la acelerac
 > [!IMPORTANT]
 > A lo largo del tutorial, usaremos un dispositivo Android con Windows 10.
 
+> [!IMPORTANT]
+> Nota para el presentador: Asegúrate de tener configurado Android Studio y el emulador de Android antes de comenzar la actividad. Esto con el fin de mostrar la aplicación en un emulador de Android durante la presentación.
+> https://docs.expo.dev/workflow/android-studio-emulator/
+
 # 🚀 Anter de comenzar
 
 ## Paso 1: Clonar el repositorio de la actividad:
