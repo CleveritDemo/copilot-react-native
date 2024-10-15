@@ -1,7 +1,9 @@
 # 💻 Actividad
+
 Desarrollo de una aplicación en React Native utilizando GitHub Copilot
 
 # 🎯 Objetivo General:
+
 Demostrar el impacto de GitHub Copilot en la mejora de la agilidad y la aceleración del proceso de desarrollo dentro de un proyecto de React Native. Resaltar cómo Copilot puede generar eficientemente componentes clave y proporcionar sugerencias inteligentes para bibliotecas que ayuden a abordar desafíos específicos.
 
 # ✅ Objetivos Específicos:
@@ -11,6 +13,7 @@ Demostrar el impacto de GitHub Copilot en la mejora de la agilidad y la acelerac
 ✓ Escribir y ejecutar pruebas con la ayuda de GitHub Copilot. Resaltar cómo Copilot facilita la creación de pruebas unitarias, asegurando la confiabilidad y corrección del código, mientras agiliza el proceso general de pruebas.
 
 # 📦 Resultados Esperados
+
 ✓ Aumento de la productividad: Al final, habrás dominado cómo aprovechar GitHub Copilot para mejorar enormemente tu productividad en el desarrollo de React Native (Expo). Desde la configuración del proyecto y la generación de código hasta la gestión de archivos y las pruebas, Copilot agiliza cada paso del flujo de trabajo de desarrollo.
 
 ✓ Implementación de funciones: Obtendrás conocimientos sobre cómo Copilot ayuda a crear y refinar funciones para el procesamiento y la adición de datos, mejorando tanto la eficiencia como la efectividad de tu proceso de codificación.
@@ -18,13 +21,14 @@ Demostrar el impacto de GitHub Copilot en la mejora de la agilidad y la acelerac
 ✓ Pruebas optimizadas: Estarás equipado para utilizar Copilot para escribir y ejecutar pruebas unitarias, asegurando una calidad y rendimiento robustos del código.
 
 # 🛠 Requisitos
+
 - VS Code
 - Node +18 instalado (se recomienda nvm)
 - Extensión de GitHub Copilot habilitada
 - Dispositivo: (recomendado)
-    - iOS: iPhone o iPad +11
-    - Android: Dispositivo Android +5.0
-      - SDK de Android o Android Studio
+  - iOS: iPhone o iPad +11
+  - Android: Dispositivo Android +5.0
+    - SDK de Android o Android Studio
 - Software:
   - Se recomienda la versión LTS de Node.js
   - Expo CLI: npm install -g expo-cli
@@ -36,16 +40,31 @@ Demostrar el impacto de GitHub Copilot en la mejora de la agilidad y la acelerac
 > [!IMPORTANT]
 > A lo largo del tutorial, usaremos un dispositivo Android con Windows 10.
 
+# 🚀 Anter de comenzar
+
+## Paso 1: Clonar el repositorio de la actividad:
+
+```bash
+git clone https://github.com/CleveritDemo/copilot-react-native.git
+```
+
+## Paso 2: Instalar las dependencias del proyecto:
+
+```bash
+cd copilot-react-native
+npm install
+```
+
 # 🦾 Vamos a codificar
 
 ### Paso 1. Conectar tu dispositivo con el entorno de desarrollo (Opcional)
-- Dispositivo:  
-  - Abre Expo Go  
-- PC:  
+
+- Dispositivo:
+  - Abre Expo Go
+- PC:
   - En la consola donde Expo se está ejecutando, escanea el código QR con tu dispositivo.
 
 Deberías ver cómo Expo construye la aplicación en la consola de tu PC, y luego la aplicación de Expo aparecerá en tu dispositivo.
-
 
 ### Paso 2. Eliminar código innecesario.
 
@@ -54,6 +73,7 @@ Deberías ver cómo Expo construye la aplicación en la consola de tu PC, y lueg
 
 🤖 Respuesta de Copilot:  
 Sí, hay un comando para resetear el proyecto en el archivo package.json. El script `reset-project` está definido de la siguiente manera:
+
 ```json
 "scripts": {
   "reset-project": "node ./scripts/reset-project.js"
@@ -63,8 +83,10 @@ Sí, hay un comando para resetear el proyecto en el archivo package.json. El scr
 Para ejecutar el comando, utiliza lo siguiente en tu terminal:
 `npm run reset-project`
 
-## Configuración de la API REST  
-### Paso 3. Crear datos simulados  
+## Configuración de la API REST
+
+### Paso 3. Crear datos simulados
+
 👤 Prompt:  
 `@workspace /new Crea un archivo llamado db.json en la raíz del proyecto. Este archivo debe contener una clave llamada users, y users debe ser un array de elementos con los siguientes campos: id, firstName, lastName, age y un campo booleano para indicar si están activos. Usa datos de los jugadores de fútbol del Real Madrid para la información, todos los campos deben ser de tipo cadena excepto active, active debe ser booleano.`
 
@@ -132,15 +154,17 @@ Ahora, puedes ejecutar el servidor con el siguiente comando:
 
 Esto iniciará un servidor API REST en http://localhost:3000 basado en la estructura de tu archivo db.json.
 
-Ejemplo de uso:  
-- Obtener todos los usuarios: GET http://localhost:3000/users  
-- Obtener un usuario por ID: GET http://localhost:3000/users/1  
-- Agregar un nuevo usuario: POST http://localhost:3000/users  
-- Actualizar un usuario: PUT http://localhost:3000/users/1  
-- Eliminar un usuario: DELETE http://localhost:3000/users/1  
+Ejemplo de uso:
 
-## Leer datos (R)  
-### Paso 5. Crear un menú de pestañas inferior llamado INICIO  
+- Obtener todos los usuarios: GET http://localhost:3000/users
+- Obtener un usuario por ID: GET http://localhost:3000/users/1
+- Agregar un nuevo usuario: POST http://localhost:3000/users
+- Actualizar un usuario: PUT http://localhost:3000/users/1
+- Eliminar un usuario: DELETE http://localhost:3000/users/1
+
+## Leer datos (R)
+
+### Paso 5. Crear un menú de pestañas inferior llamado INICIO
 
 👤 Prompt:  
 `¿Cómo puedo crear una nueva pestaña llamada inicio en la carpeta /app, usando el archivo #file:index.tsx como la página de la pestaña?`
@@ -150,16 +174,16 @@ Para crear una nueva pestaña llamada "Inicio" en la carpeta /app y usar el arch
 
 1. Asegúrate de que el archivo index.tsx esté configurado correctamente: El archivo index.tsx ya está configurado como se muestra en el contexto proporcionado.
 
-2. Actualiza el archivo _layout.tsx para incluir la nueva pestaña de Inicio: Modifica el archivo _layout.tsx para incluir el componente index.tsx como una pestaña.
+2. Actualiza el archivo \_layout.tsx para incluir la nueva pestaña de Inicio: Modifica el archivo \_layout.tsx para incluir el componente index.tsx como una pestaña.
 
 ```tsx
 // app/_layout.tsx
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { Tabs } from "expo-router";
+import React from "react";
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { TabBarIcon } from "@/components/navigation/TabBarIcon";
+import { Colors } from "@/constants/Colors";
+import { useColorScheme } from "@/hooks/useColorScheme";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -167,15 +191,19 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Inicio',
+          title: "Inicio",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <TabBarIcon
+              name={focused ? "home" : "home-outline"}
+              color={color}
+            />
           ),
         }}
       />
@@ -183,9 +211,11 @@ export default function TabLayout() {
   );
 }
 ```
+
 Con estos pasos, tendrás una nueva pestaña llamada "Inicio" en la carpeta /app, y el archivo index.tsx se utilizará como la página para esta pestaña. La pestaña de Inicio mostrará el contenido definido en index.tsx.
 
-### Paso 6. Crear una interfaz de datos  
+### Paso 6. Crear una interfaz de datos
+
 👤 Prompt:  
 `@workspace /new Lee el archivo #file:db.json y crea un archivo llamado types.ts y crea una interfaz con los datos en db.json.`
 
@@ -193,8 +223,7 @@ Con estos pasos, tendrás una nueva pestaña llamada "Inicio" en la carpeta /app
 Claro, aquí está el archivo que solicitaste:  
 `types.ts`
 
-
-### Paso 7. Mostrar datos desde la API REST  
+### Paso 7. Mostrar datos desde la API REST
 
 👤 Prompt:  
 Crea una función en el archivo #file:index.tsx que realice una solicitud GET a la URL `localhost:3000/user` para almacenar los datos en una variable y luego mostrar los datos en la pantalla, usa fetch.
@@ -231,17 +260,13 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      {data ? (
-        <Text>{JSON.stringify(data)}</Text>
-      ) : (
-        <Text>Cargando...</Text>
-      )}
+      {data ? <Text>{JSON.stringify(data)}</Text> : <Text>Cargando...</Text>}
     </View>
   );
 }
 ```
 
-> [!WARNING]   
+> [!WARNING]  
 > Reemplaza "localhost" por tu IP actual, ejemplo: http://192.168.1.1:3000/users
 
 👤 Prompt:  
@@ -254,8 +279,8 @@ UserCard.tsx
 
 ```tsx
 // components/UserCard.tsx
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
 interface UserCardProps {
   id: string;
@@ -265,13 +290,23 @@ interface UserCardProps {
   active: boolean;
 }
 
-const UserCard: React.FC<UserCardProps> = ({ id, firstName, lastName, age, active }) => {
+const UserCard: React.FC<UserCardProps> = ({
+  id,
+  firstName,
+  lastName,
+  age,
+  active,
+}) => {
   return (
     <View style={styles.card}>
       <Text style={styles.id}>ID: {id}</Text>
-      <Text style={styles.fullName}>Nombre Completo: {firstName} {lastName}</Text>
+      <Text style={styles.fullName}>
+        Nombre Completo: {firstName} {lastName}
+      </Text>
       <Text style={styles.age}>Edad: {age}</Text>
-      <Text style={active ? styles.active : styles.red}>Activo: {active ? 'Sí' : 'No'}</Text>
+      <Text style={active ? styles.active : styles.red}>
+        Activo: {active ? "Sí" : "No"}
+      </Text>
     </View>
   );
 };
@@ -281,8 +316,8 @@ const styles = StyleSheet.create({
     padding: 20,
     margin: 10,
     borderRadius: 10,
-    backgroundColor: '#f8f9fa',
-    shadowColor: '#000',
+    backgroundColor: "#f8f9fa",
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 5,
@@ -290,7 +325,7 @@ const styles = StyleSheet.create({
   },
   id: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   fullName: {
     fontSize: 18,
@@ -301,12 +336,12 @@ const styles = StyleSheet.create({
   },
   active: {
     fontSize: 16,
-    color: 'green',
+    color: "green",
   },
   red: {
     fontSize: 16,
-    color: 'red',
-  }
+    color: "red",
+  },
 });
 
 export default UserCard;
@@ -396,6 +431,7 @@ const styles = StyleSheet.create({
 🤖 Respuesta de Copilot:
 
 Para crear un nuevo elemento de menú de pestañas llamado "enroll", necesitas seguir estos pasos:
+
 1. **Crear la pantalla de inscripción**: Crea un nuevo archivo llamado `enroll.tsx` en la carpeta `tabs`.
 
 2. **Actualizar el diseño de la pestaña**: Actualiza el archivo `_layout.tsx` en la carpeta `tabs` para incluir la nueva pestaña "enroll".
@@ -406,12 +442,11 @@ Crea un nuevo archivo llamado `enroll.tsx` en la carpeta `tabs`:
 ```tsx
 // app/tabs/enroll.tsx
 
-import React from 'react';
+import React from "react";
 
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from "react-native";
 
 const EnrollScreen: React.FC = () => {
-
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Enroll Screen</Text>
@@ -419,18 +454,15 @@ const EnrollScreen: React.FC = () => {
   );
 };
 
-  
-
 const styles = StyleSheet.create({
-
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   text: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
 
@@ -443,35 +475,42 @@ Actualiza el archivo `_layout.tsx` en la carpeta `tabs` para incluir la nueva pe
 ```tsx
 // app/tabs/_layout.tsx
 
-import { Tabs } from 'expo-router';
-import React from 'react';
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { Tabs } from "expo-router";
+import React from "react";
+import { TabBarIcon } from "@/components/navigation/TabBarIcon";
+import { Colors } from "@/constants/Colors";
+import { useColorScheme } from "@/hooks/useColorScheme";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="home"
         options={{
-          title: 'Home',
+          title: "Home",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <TabBarIcon
+              name={focused ? "home" : "home-outline"}
+              color={color}
+            />
           ),
         }}
       />
       <Tabs.Screen
         name="enroll"
         options={{
-          title: 'Enroll',
+          title: "Enroll",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'person-add' : 'person-add-outline'} color={color} />
+            <TabBarIcon
+              name={focused ? "person-add" : "person-add-outline"}
+              color={color}
+            />
           ),
         }}
       />
@@ -490,15 +529,15 @@ Crea el componente del formulario: Crea un nuevo archivo para el componente del 
 
 ```tsx
 // components/UserForm.tsx
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
-import { User } from '@/types';
+import React, { useState } from "react";
+import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
+import { User } from "@/types";
 
 const UserForm: React.FC = () => {
   const [user, setUser] = useState<Partial<User>>({
-    firstName: '',
-    lastName: '',
-    age: '',
+    firstName: "",
+    lastName: "",
+    age: "",
     active: false,
   });
 
@@ -508,23 +547,23 @@ const UserForm: React.FC = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://192.168.100.24:3000/users', {
-        method: 'POST',
+      const response = await fetch("http://192.168.100.24:3000/users", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(user),
       });
 
       if (response.ok) {
-        Alert.alert('Success', 'User added successfully');
-        setUser({ firstName: '', lastName: '', age: '', active: false });
+        Alert.alert("Success", "User added successfully");
+        setUser({ firstName: "", lastName: "", age: "", active: false });
       } else {
-        Alert.alert('Error', 'Failed to add user');
+        Alert.alert("Error", "Failed to add user");
       }
     } catch (error) {
-      console.error('Error adding user:', error);
-      Alert.alert('Error', 'Failed to add user');
+      console.error("Error adding user:", error);
+      Alert.alert("Error", "Failed to add user");
     }
   };
 
@@ -534,25 +573,25 @@ const UserForm: React.FC = () => {
       <TextInput
         style={styles.input}
         value={user.firstName}
-        onChangeText={(text) => handleChange('firstName', text)}
+        onChangeText={(text) => handleChange("firstName", text)}
       />
       <Text style={styles.label}>Last Name</Text>
       <TextInput
         style={styles.input}
         value={user.lastName}
-        onChangeText={(text) => handleChange('lastName', text)}
+        onChangeText={(text) => handleChange("lastName", text)}
       />
       <Text style={styles.label}>Age</Text>
       <TextInput
         style={styles.input}
         value={user.age.toString()}
-        onChangeText={(text) => handleChange('age', parseInt(text))}
+        onChangeText={(text) => handleChange("age", parseInt(text))}
         keyboardType="numeric"
       />
       <Text style={styles.label}>Active</Text>
       <Button
-        title={user.active ? 'Active' : 'Inactive'}
-        onPress={() => handleChange('active', !user.active)}
+        title={user.active ? "Active" : "Inactive"}
+        onPress={() => handleChange("active", !user.active)}
       />
       <Button title="Submit" onPress={handleSubmit} />
     </View>
@@ -565,12 +604,12 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 8,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: "#ccc",
     borderRadius: 4,
     padding: 8,
     marginBottom: 16,
@@ -583,12 +622,11 @@ export default UserForm;
 
 2. Usa el componente del formulario en tu pantalla de Inscripción: Modifica el archivo `enroll.tsx` para incluir el componente `UserForm`.
 
-
 ```tsx
 // FILE: app/enroll.tsx
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import UserForm from '../components/UserForm';
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import UserForm from "../components/UserForm";
 
 export default function Enroll() {
   return (
@@ -601,8 +639,8 @@ export default function Enroll() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     padding: 16,
   },
 });
@@ -626,9 +664,9 @@ Aquí está el UserCard.tsx actualizado:
 
 ```tsx
 // FILE: components/UserCard.tsx
-import { User } from '@/types';
-import React from 'react';
-import { View, Text, StyleSheet, Pressable, Alert } from 'react-native';
+import { User } from "@/types";
+import React from "react";
+import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
 
 interface UserCardProps {
   id: string;
@@ -641,30 +679,40 @@ interface UserCardProps {
 const UserCard: React.FC<UserCardProps> = (user: User) => {
   const toggleActiveStatus = async () => {
     try {
-      const response = await fetch(`http://192.168.100.24:3000/users/${user.id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ ...user, active: !user.active }),
-      });
+      const response = await fetch(
+        `http://192.168.100.24:3000/users/${user.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ...user, active: !user.active }),
+        }
+      );
 
       if (response.ok) {
-        Alert.alert('Success', 'User status updated successfully');
+        Alert.alert("Success", "User status updated successfully");
       } else {
-        Alert.alert('Error', 'Failed to update user status');
+        Alert.alert("Error", "Failed to update user status");
       }
     } catch (error) {
-      Alert.alert('Error', 'An error occurred');
+      Alert.alert("Error", "An error occurred");
     }
   };
 
   return (
-    <Pressable onPress={toggleActiveStatus} style={({ pressed }) => [styles.card, pressed && styles.pressed]}>
+    <Pressable
+      onPress={toggleActiveStatus}
+      style={({ pressed }) => [styles.card, pressed && styles.pressed]}
+    >
       <Text style={styles.id}>ID: {user.id}</Text>
-      <Text style={styles.fullName}>Full Name: {user.firstName} {user.lastName}</Text>
+      <Text style={styles.fullName}>
+        Full Name: {user.firstName} {user.lastName}
+      </Text>
       <Text style={styles.age}>Age: {user.age}</Text>
-      <Text style={user.active ? styles.active : styles.inactive}>Active: {user.active ? 'Yes' : 'No'}</Text>
+      <Text style={user.active ? styles.active : styles.inactive}>
+        Active: {user.active ? "Yes" : "No"}
+      </Text>
     </Pressable>
   );
 };
@@ -674,8 +722,8 @@ const styles = StyleSheet.create({
     padding: 20,
     margin: 10,
     borderRadius: 10,
-    backgroundColor: '#f8f9fa',
-    shadowColor: '#000',
+    backgroundColor: "#f8f9fa",
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 5,
@@ -686,7 +734,7 @@ const styles = StyleSheet.create({
   },
   id: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   fullName: {
     fontSize: 18,
@@ -697,11 +745,11 @@ const styles = StyleSheet.create({
   },
   active: {
     fontSize: 16,
-    color: 'green',
+    color: "green",
   },
   inactive: {
     fontSize: 16,
-    color: 'red',
+    color: "red",
   },
 });
 
@@ -710,9 +758,10 @@ export default UserCard;
 
 En este código, la función `toggleActiveStatus` envía una solicitud PUT a la API para alternar el estado activo del usuario. El componente `Pressable` se utiliza para manejar el evento de presión en la tarjeta. Cuando se presiona la tarjeta, se llama a la función `toggleActiveStatus`.
 
-
 ## Eliminar datos (D)
+
 ### Paso 10. Eliminar un elemento de la lista
+
 👤 Prompt:
 `@workspace en el archivo UserCard.tsx añade una función que, cuando el usuario mantenga presionada la tarjeta, muestre una alerta preguntando "¿estás seguro de eliminar el elemento?", si es así, envía una llamada HTTP a la API con el método DELETE, utiliza el componente Pressable de RN`
 
@@ -721,9 +770,9 @@ Claro, aquí está el archivo UserCard.tsx actualizado con la función para mane
 
 ```tsx
 // FILE: components/UserCard.tsx
-import { User } from '@/types';
-import React from 'react';
-import { View, Text, StyleSheet, Pressable, Alert } from 'react-native';
+import { User } from "@/types";
+import React from "react";
+import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
 
 interface UserCardProps {
   id: string;
@@ -736,51 +785,57 @@ interface UserCardProps {
 const UserCard: React.FC<UserCardProps> = (user: User) => {
   const toggleActiveStatus = async () => {
     try {
-      const response = await fetch(`http://192.168.100.24:3000/users/${user.id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ ...user, active: !user.active }),
-      });
+      const response = await fetch(
+        `http://192.168.100.24:3000/users/${user.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ...user, active: !user.active }),
+        }
+      );
 
       if (response.ok) {
-        Alert.alert('Success', 'User status updated successfully');
+        Alert.alert("Success", "User status updated successfully");
       } else {
-        Alert.alert('Error', 'Failed to update user status');
+        Alert.alert("Error", "Failed to update user status");
       }
     } catch (error) {
-      Alert.alert('Error', 'An error occurred');
+      Alert.alert("Error", "An error occurred");
     }
   };
 
   const handleLongPress = () => {
     Alert.alert(
-      'Confirm Deletion',
-      'Are you sure to delete the element?',
+      "Confirm Deletion",
+      "Are you sure to delete the element?",
       [
         {
-          text: 'Cancel',
-          style: 'cancel',
+          text: "Cancel",
+          style: "cancel",
         },
         {
-          text: 'Yes',
+          text: "Yes",
           onPress: async () => {
             try {
-              const response = await fetch(`http://192.168.100.24:3000/users/${user.id}`, {
-                method: 'DELETE',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-              });
+              const response = await fetch(
+                `http://192.168.100.24:3000/users/${user.id}`,
+                {
+                  method: "DELETE",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                }
+              );
 
               if (response.ok) {
-                Alert.alert('Success', 'User deleted successfully');
+                Alert.alert("Success", "User deleted successfully");
               } else {
-                Alert.alert('Error', 'Failed to delete user');
+                Alert.alert("Error", "Failed to delete user");
               }
             } catch (error) {
-              Alert.alert('Error', 'An error occurred');
+              Alert.alert("Error", "An error occurred");
             }
           },
         },
@@ -796,9 +851,13 @@ const UserCard: React.FC<UserCardProps> = (user: User) => {
       style={({ pressed }) => [styles.card, pressed && styles.pressed]}
     >
       <Text style={styles.id}>ID: {user.id}</Text>
-      <Text style={styles.fullName}>Full Name: {user.firstName} {user.lastName}</Text>
+      <Text style={styles.fullName}>
+        Full Name: {user.firstName} {user.lastName}
+      </Text>
       <Text style={styles.age}>Age: {user.age}</Text>
-      <Text style={user.active ? styles.active : styles.inactive}>Active: {user.active ? 'Yes' : 'No'}</Text>
+      <Text style={user.active ? styles.active : styles.inactive}>
+        Active: {user.active ? "Yes" : "No"}
+      </Text>
     </Pressable>
   );
 };
@@ -808,8 +867,8 @@ const styles = StyleSheet.create({
     padding: 20,
     margin: 10,
     borderRadius: 10,
-    backgroundColor: '#f8f9fa',
-    shadowColor: '#000',
+    backgroundColor: "#f8f9fa",
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 5,
@@ -820,7 +879,7 @@ const styles = StyleSheet.create({
   },
   id: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   fullName: {
     fontSize: 18,
@@ -831,11 +890,11 @@ const styles = StyleSheet.create({
   },
   active: {
     fontSize: 16,
-    color: 'green',
+    color: "green",
   },
   inactive: {
     fontSize: 16,
-    color: 'red',
+    color: "red",
   },
 });
 
@@ -843,7 +902,6 @@ export default UserCard;
 ```
 
 En este código, la función handleLongPress muestra una alerta pidiendo confirmación para eliminar al usuario. Si el usuario confirma, envía una solicitud DELETE a la API para eliminar al usuario. El componente Pressable se utiliza para manejar tanto los eventos de presión como de presión prolongada en la tarjeta.
-
 
 ## Paso 11: Agregar Manejo de Estado
 
@@ -854,6 +912,7 @@ En este código, la función handleLongPress muestra una alerta pidiendo confirm
 Un gestor de estado ligero, potente y popular que funciona bien con React Native es Zustand. Es conocido por su simplicidad, API minimalista y rendimiento.
 
 Características clave de Zustand:
+
 - Mínimo código boilerplate: Fácil de configurar y usar con un código mínimo.
 - Rendimiento: Actualizaciones de estado y re-renderizados eficientes.
 - Compatibilidad con React Native: Funciona sin problemas con React Native.
@@ -874,7 +933,7 @@ Crea la store de Zustand: Asegúrate de tener un store de Zustand configurada pa
 
 ```tsx
 // FILE: store.ts
-import { create } from 'zustand';
+import { create } from "zustand";
 
 interface User {
   id: string;
@@ -898,8 +957,6 @@ export default useStore;
 ```
 
 Actualiza el archivo index.tsx para usar el store de Zustand Modifica el archivo index.tsx para obtener datos y almacenarlos en el store de Zustand.
-
-
 
 ```tsx
 // FILE: index.tsx
@@ -974,7 +1031,6 @@ const styles = StyleSheet.create({
 });
 ```
 
-
 Para almacenar la respuesta HTTP en un estado global usando Zustand, debes seguir estos pasos:
 
 Crear la store de Zustand: Asegúrate de tener una store de Zustand configurada para gestionar el estado global. Si no tienes una, créala en `store.ts`.
@@ -989,7 +1045,6 @@ La función `fetchData` obtiene los datos del usuario de la API y los almacena e
 
 El componente `FlatList` renderiza los datos del usuario desde el estado global.
 
-
 ### Usar funciones de Zustand
 
 👤 Prompt:
@@ -1002,8 +1057,8 @@ Para actualizar el campo active usando Zustand, necesitas agregar una función e
 
 ```tsx
 // FILE: store.ts
-import { create } from 'zustand';
-import { User } from './types';
+import { create } from "zustand";
+import { User } from "./types";
 
 interface UserState {
   users: User[];
@@ -1014,11 +1069,12 @@ interface UserState {
 const useStore = create<UserState>((set) => ({
   users: [],
   setUsers: (users) => set({ users }),
-  toggleUserActive: (id) => set((state) => ({
-    users: state.users.map(user =>
-      user.id === id ? { ...user, active: !user.active } : user
-    ),
-  })),
+  toggleUserActive: (id) =>
+    set((state) => ({
+      users: state.users.map((user) =>
+        user.id === id ? { ...user, active: !user.active } : user
+      ),
+    })),
 }));
 
 export default useStore;
@@ -1028,10 +1084,10 @@ export default useStore;
 
 ```tsx
 // FILE: components/UserCard.tsx
-import { User } from '@/types';
-import React from 'react';
-import { View, Text, StyleSheet, Pressable, Alert } from 'react-native';
-import useStore from '../store';
+import { User } from "@/types";
+import React from "react";
+import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
+import useStore from "../store";
 
 interface UserCardProps {
   id: string;
@@ -1046,52 +1102,58 @@ const UserCard: React.FC<UserCardProps> = (user: User) => {
 
   const toggleActiveStatus = async () => {
     try {
-      const response = await fetch(`http://192.168.100.24:3000/users/${user.id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ ...user, active: !user.active }),
-      });
+      const response = await fetch(
+        `http://192.168.100.24:3000/users/${user.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ...user, active: !user.active }),
+        }
+      );
 
       if (response.ok) {
         toggleUserActive(user.id);
-        Alert.alert('Success', 'User status updated successfully');
+        Alert.alert("Success", "User status updated successfully");
       } else {
-        Alert.alert('Error', 'Failed to update user status');
+        Alert.alert("Error", "Failed to update user status");
       }
     } catch (error) {
-      Alert.alert('Error', 'An error occurred');
+      Alert.alert("Error", "An error occurred");
     }
   };
 
   const handleLongPress = () => {
     Alert.alert(
-      'Confirm Deletion',
-      'Are you sure to delete the element?',
+      "Confirm Deletion",
+      "Are you sure to delete the element?",
       [
         {
-          text: 'Cancel',
-          style: 'cancel',
+          text: "Cancel",
+          style: "cancel",
         },
         {
-          text: 'Yes',
+          text: "Yes",
           onPress: async () => {
             try {
-              const response = await fetch(`http://192.168.100.24:3000/users/${user.id}`, {
-                method: 'DELETE',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-              });
+              const response = await fetch(
+                `http://192.168.100.24:3000/users/${user.id}`,
+                {
+                  method: "DELETE",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                }
+              );
 
               if (response.ok) {
-                Alert.alert('Success', 'User deleted successfully');
+                Alert.alert("Success", "User deleted successfully");
               } else {
-                Alert.alert('Error', 'Failed to delete user');
+                Alert.alert("Error", "Failed to delete user");
               }
             } catch (error) {
-              Alert.alert('Error', 'An error occurred');
+              Alert.alert("Error", "An error occurred");
             }
           },
         },
@@ -1107,9 +1169,13 @@ const UserCard: React.FC<UserCardProps> = (user: User) => {
       style={({ pressed }) => [styles.card, pressed && styles.pressed]}
     >
       <Text style={styles.id}>ID: {user.id}</Text>
-      <Text style={styles.fullName}>Full Name: {user.firstName} {user.lastName}</Text>
+      <Text style={styles.fullName}>
+        Full Name: {user.firstName} {user.lastName}
+      </Text>
       <Text style={styles.age}>Age: {user.age}</Text>
-      <Text style={user.active ? styles.active : styles.inactive}>Active: {user.active ? 'Yes' : 'No'}</Text>
+      <Text style={user.active ? styles.active : styles.inactive}>
+        Active: {user.active ? "Yes" : "No"}
+      </Text>
     </Pressable>
   );
 };
@@ -1119,8 +1185,8 @@ const styles = StyleSheet.create({
     padding: 20,
     margin: 10,
     borderRadius: 10,
-    backgroundColor: '#f8f9fa',
-    shadowColor: '#000',
+    backgroundColor: "#f8f9fa",
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 5,
@@ -1131,7 +1197,7 @@ const styles = StyleSheet.create({
   },
   id: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   fullName: {
     fontSize: 18,
@@ -1142,16 +1208,15 @@ const styles = StyleSheet.create({
   },
   active: {
     fontSize: 16,
-    color: 'green',
+    color: "green",
   },
   inactive: {
     fontSize: 16,
-    color: 'red',
+    color: "red",
   },
 });
 
 export default UserCard;
-
 ```
 
 ## Paso 12: Crear Filtro
@@ -1165,11 +1230,17 @@ Para agregar un interruptor con la etiqueta "Solo Activos" en el archivo /app/in
 1. Agrega el interruptor y el estado para gestionar su valor: Actualiza el componente Index para incluir un interruptor para filtrar usuarios activos.
 2. Filtra los usuarios según el valor del interruptor: Implementa una función para filtrar los usuarios según el campo activo.
 
-
 ```tsx
 // FILE: index.tsx
 import React, { useEffect, useState } from "react";
-import { SafeAreaView, FlatList, View, Text, StyleSheet, Switch } from "react-native";
+import {
+  SafeAreaView,
+  FlatList,
+  View,
+  Text,
+  StyleSheet,
+  Switch,
+} from "react-native";
 import UserCard from "../components/UserCard"; // Ensure the path is correct
 import useStore from "../store";
 import { User } from "../types";
@@ -1197,7 +1268,9 @@ export default function Index() {
     fetchData();
   }, []);
 
-  const filteredUsers = activeOnly ? users.filter((user) => user.active) : users;
+  const filteredUsers = activeOnly
+    ? users.filter((user) => user.active)
+    : users;
 
   const renderItem = ({ item }: { item: User }) => (
     <UserCard
@@ -1254,6 +1327,7 @@ const styles = StyleSheet.create({
 ## Paso 13: Crear Prueba (Unit Test)
 
 ### Probar el componente UserCard
+
 👤 Prompt:
 `@workspace lee el #file:UserCard.tsx y prepara el código para comenzar a crear pruebas usando react-testing-library para react native, prueba solo si la información del usuario es correcta`
 
@@ -1263,7 +1337,7 @@ Para preparar el código para crear pruebas para el componente UserCard utilizan
 1. Instala las dependencias necesarias: Asegúrate de tener @testing-library/react-native instalado. Si no lo tienes, instálalo usando npm o yarn.
    `npm install --save-dev @testing-library/react-native`
 
-2. Crea un archivo de prueba para UserCard: Crea un nuevo archivo de prueba en el directorio __tests__, por ejemplo, UserCard.test.tsx.
+2. Crea un archivo de prueba para UserCard: Crea un nuevo archivo de prueba en el directorio **tests**, por ejemplo, UserCard.test.tsx.
 
 3. Escribe los casos de prueba: Escribe casos de prueba para verificar que la información del usuario se muestre correctamente.
 
@@ -1271,37 +1345,38 @@ Aquí está el código para el archivo de prueba:
 
 ```ts
 // FILE: components/__tests__/UserCard.test.tsx
-import React from 'react';
-import { render } from '@testing-library/react-native';
-import UserCard from '../UserCard';
+import React from "react";
+import { render } from "@testing-library/react-native";
+import UserCard from "../UserCard";
 
-describe('UserCard', () => {
+describe("UserCard", () => {
   const user = {
-    id: '4',
-    firstName: 'Toni',
-    lastName: 'Kroos',
-    age: '31',
+    id: "4",
+    firstName: "Toni",
+    lastName: "Kroos",
+    age: "31",
     active: true,
   };
 
-  it('displays the correct user information', () => {
+  it("displays the correct user information", () => {
     const { getByText } = render(<UserCard {...user} />);
 
     expect(getByText(`ID: ${user.id}`)).toBeTruthy();
-    expect(getByText(`Full Name: ${user.firstName} ${user.lastName}`)).toBeTruthy();
+    expect(
+      getByText(`Full Name: ${user.firstName} ${user.lastName}`)
+    ).toBeTruthy();
     expect(getByText(`Age: ${user.age}`)).toBeTruthy();
-    expect(getByText('Active: Yes')).toBeTruthy();
+    expect(getByText("Active: Yes")).toBeTruthy();
   });
 
-  it('displays inactive status correctly', () => {
+  it("displays inactive status correctly", () => {
     const inactiveUser = { ...user, active: false };
     const { getByText } = render(<UserCard {...inactiveUser} />);
 
-    expect(getByText('Active: No')).toBeTruthy();
+    expect(getByText("Active: No")).toBeTruthy();
   });
 });
 ```
-
 
 Puedes ejecutar las pruebas utilizando el siguiente comando:
 `npm test`
