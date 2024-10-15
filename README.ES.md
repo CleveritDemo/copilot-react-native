@@ -53,6 +53,7 @@ git clone https://github.com/CleveritDemo/copilot-react-native.git
 ```bash
 cd copilot-react-native
 npm install
+npx expo start
 ```
 
 # 🦾 Vamos a codificar

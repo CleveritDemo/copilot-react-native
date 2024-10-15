@@ -57,6 +57,7 @@ Navigate to the project directory and install the required dependencies using th
 ```bash
 cd copilot-react-native
 npm install
+npx expo start
 ```
 
 # 🦾 Let's code
