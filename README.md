@@ -228,6 +228,17 @@ With these steps, you will have a new tab called "Home" in the /app folder, and 
 Sure, here is the file you requested:
 `types.ts`
 
+```ts
+// types.ts
+export interface User {
+  id: string;
+  firstName: string;
+  lastName: string;
+  age: string;
+  active: boolean;
+}
+```
+
 ### Step 7. Display data from REST API
 
 👤 Prompt:
