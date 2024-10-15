@@ -2,6 +2,8 @@
 
 Desarrollo de una aplicación en React Native utilizando GitHub Copilot
 
+![app demo](/assets/gifs/GIF.gif)
+
 # 🎯 Objetivo General:
 
 Demostrar el impacto de GitHub Copilot en la mejora de la agilidad y la aceleración del proceso de desarrollo dentro de un proyecto de React Native. Resaltar cómo Copilot puede generar eficientemente componentes clave y proporcionar sugerencias inteligentes para bibliotecas que ayuden a abordar desafíos específicos.

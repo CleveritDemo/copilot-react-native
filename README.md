@@ -2,6 +2,8 @@
 
 Development of an app in React Native using GitHub Copilot
 
+![app demo](/assets/gifs/GIF.gif)
+
 # 🎯 General Objective:
 
 Demonstrate the impact of GitHub Copilot in enhancing agility and accelerating the development process within a React Native project. Highlight how Copilot can efficiently generate key components and provide intelligent suggestions for libraries that can help address specific challenges.
