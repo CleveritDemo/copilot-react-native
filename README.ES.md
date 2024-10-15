@@ -1403,4 +1403,4 @@ Puedes ejecutar las pruebas utilizando el siguiente comando:
 
 1. Utilizar GitHub Copilot para hacer que el formulario de creación de usuario sea reactivo.
 2. Utilizar GitHub Copilot para hacer que el eliminado de usuario sea reactivo.
-Usa GitHub Copilot para agregar una función que actualice la lista de usuarios, usa FlatList.
+3. Usa GitHub Copilot para agregar una función que actualice la lista de usuarios, usa FlatList.
