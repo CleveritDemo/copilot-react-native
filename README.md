@@ -40,7 +40,9 @@ Demonstrate the impact of GitHub Copilot in enhancing agility and accelerating t
 > [!IMPORTANT]  
 > Throughout the tutorial, we will use an Android device with Windows 10.
 
-[!IMPORTANT] Note for the presenter: Make sure to have Android Studio and the Android emulator set up before starting the activity. This is to display the application on an Android emulator during the presentation. https://docs.expo.dev/workflow/android-studio-emulator/
+> [!IMPORTANT]
+
+> Note for the presenter: Make sure to have Android Studio and the Android emulator set up before starting the activity. This is to display the application on an Android emulator during the presentation. https://docs.expo.dev/workflow/android-studio-emulator/
 
 # 🚀 Before Starting
 
