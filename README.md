@@ -1404,3 +1404,4 @@ You can run the tests using the following command:
 
 1. Use GitHub Copilot to make the user creation form reactive.
 2. Use GitHub Copilot to make user deletion reactive.
+3. Use GitHub Copilot to add a feature that refreshes the users list, use FlatList.
