@@ -172,7 +172,7 @@ Example Usage:
 ### Step 5. Create a bottom tab menu called HOME
 
 👤 Prompt:
-`How can I create a new tab called home in /app folder, use the #file:index.tsx as the page of the tab`
+`@workspace How can I create a new tab called Home in the file #file:_layout.tsx that displays the content of the file #file:index.tsx and uses #file:TabBarIcon.tsx for the icon of the new tab?`
 
 🤖 Copilot Answer:
 To create a new tab called "Home" in the /app folder and use the index.tsx file as the page of the tab, follow these steps:
@@ -222,7 +222,7 @@ With these steps, you will have a new tab called "Home" in the /app folder, and 
 ### Step 6. Create data interface
 
 👤 Prompt:
-`@workspace /new Read the #file:db.json  create a file named types.ts and create an interface with the data in db.json`
+`@workspace Read the file #file:db.json and create an interface for the data in that file. The file should be named types.ts`
 
 🤖 Copilot Answer:
 Sure, here is the file you requested:
@@ -231,7 +231,7 @@ Sure, here is the file you requested:
 ### Step 7. Display data from REST API
 
 👤 Prompt:
-Create a function in #file:index.tsx that performs a GET request to the URL `localhost:3000/user` to store the data in a variable then display the data on the screen, use fetch.
+`@workspace Create a function in the file #file:index.tsx that makes a GET request to the URL localhost:3000/user to store the data in a variable and then display the data on the screen. Use fetch for the request.`
 
 🤖 Copilot Answer:
 To perform a GET request to the URL http://localhost:3000/users and display the data on the screen, you can use the fetch API in combination with React's useEffect and useState hooks. Here is how you can modify the index.tsx file to include this functionality:
@@ -272,7 +272,7 @@ export default function Index() {
 ```
 
 > [!WARNING]  
-> Replace "localhost" to your current IP, example: http://192.168.1.1:3000/users
+> Replace "localhost" to your current IP if you are using a real device or emulator. Example: http://192.168.1.1:3000/users
 
 👤 Prompt: `@workspace /new Create a component named UserCard the component must show the id, fullname, age and the active fields, the component, use react native style to set some style`
 🤖 Copilot Answer:
@@ -351,7 +351,7 @@ export default UserCard;
 ```
 
 👤 Prompt:
-`Show me how can I display the data from API in #file:index.tsx using SafeAreaView component and FlatList component in order to show all elements using UserCard`
+`@workspace How can I display data from the API in #file:index.tsx using the SafeAreaView component and the FlatList component to show all items using #file:UserCard.tsx? There should be a loading indicator while the data is being loaded.`
 
 🤖 Copilot Answer:
 To display the data from the API using `SafeAreaView` and `FlatList` components, you can follow these steps:
@@ -429,7 +429,7 @@ const styles = StyleSheet.create({
 ### Step 8: Create another tab with a form to submit data to the REST API.
 
 👤 Prompt:
-`@workspace Show me how to create a new tab called enrrol`
+`@workspace Show me how to create a new tab called "enroll" using the layout file #file:_layout.tsx`
 
 🤖 Copilot Answer:
 
@@ -443,7 +443,7 @@ Step 1: Create the Enroll Screen
 Create a new file named `enroll.tsx` in the `tabs` folder:
 
 ```tsx
-// app/tabs/enroll.tsx
+// app/enroll.tsx
 
 import React from "react";
 
@@ -476,7 +476,7 @@ Step 2: Update the Tab Layout
 Update the `_layout.tsx` file in the `tabs` folder to include the new "enroll" tab:
 
 ```tsx
-// app/tabs/_layout.tsx
+// app/_layout.tsx
 
 import { Tabs } from "expo-router";
 import React from "react";
@@ -523,7 +523,7 @@ export default function TabLayout() {
 ```
 
 👤 Prompt:
-`@workspace Show me how to create a form that has the same fields as my user interface and that, upon submission, makes a POST API call to /users`
+`@workspace Show me how to create a form that has the same fields as my user interface in the file #file:types.ts and, upon submission, makes a POST request to the API at /users.`
 
 🤖 Copilot Answer:
 To create a form that matches your User interface and makes a POST API call to users upon submission, follow these steps:
@@ -765,7 +765,7 @@ In this code, the toggleActiveStatus function sends a PUT request to the API to 
 ### Step 10. Delete an element in the list
 
 👤 Prompt:
-`@workspace in the file UserCard.tsx add a function that when the user PressLong the card show an alert asking "are you sure to delete the element?", if yes send an http call to the api with delete method, use Presseable RN component`
+`@workspace In the file #file:UserCard.tsx, add a function that, when the user long-presses the card, shows an alert asking "Are you sure you want to delete this item?". If confirmed, send an HTTP DELETE request to the API using the Pressable component from RN.`
 
 🤖 Copilot Answer:
 Sure, here is the updated UserCard.tsx file with the function to handle long press and delete the user:
@@ -1051,7 +1051,7 @@ The FlatList component renders the user data from the global state.
 ### Use Zustand functions
 
 👤 Prompt:
-`@workspace read the #file:store.ts and the #file:UserCard.tsx and create a function to update the field active using zustand`
+`@workspace read the files #file:store.ts, #file:UserCard.tsx and create a function to update the active field using zustand`
 
 🤖 Copilot Answer:
 To update the active field using Zustand, you need to add a function in the Zustand store to update a specific user's active status. Then, you can call this function from the UserCard component.
@@ -1383,3 +1383,8 @@ describe("UserCard", () => {
 
 You can run the tests using the following command:
 `npm test`
+
+## To Do:
+
+1. Use GitHub Copilot to make the user creation form reactive.
+2. Use GitHub Copilot to make user deletion reactive.

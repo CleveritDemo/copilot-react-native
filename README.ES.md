@@ -168,7 +168,7 @@ Ejemplo de uso:
 ### Paso 5. Crear un menú de pestañas inferior llamado INICIO
 
 👤 Prompt:  
-`¿Cómo puedo crear una nueva pestaña llamada inicio en la carpeta /app, usando el archivo #file:index.tsx como la página de la pestaña?`
+`@workspace ¿Cómo puedo crear una nueva tab llamada Home en el archivo #file:_layout.tsx que muestre el contenido del archivo #file:index.tsx y para el icono de la nueva tab use #file:TabBarIcon.tsx ?`
 
 🤖 Respuesta de Copilot:  
 Para crear una nueva pestaña llamada "Inicio" en la carpeta /app y usar el archivo index.tsx como la página de la pestaña, sigue estos pasos:
@@ -218,16 +218,27 @@ Con estos pasos, tendrás una nueva pestaña llamada "Inicio" en la carpeta /app
 ### Paso 6. Crear una interfaz de datos
 
 👤 Prompt:  
-`@workspace /new Lee el archivo #file:db.json y crea un archivo llamado types.ts y crea una interfaz con los datos en db.json.`
+`@workspace Lee el archivo #file:db.json y crea una interfaz para los datos en dicho archivo, el archivo deberia llamarse types.ts`
 
 🤖 Respuesta de Copilot:  
 Claro, aquí está el archivo que solicitaste:  
 `types.ts`
 
+```ts
+// types.ts
+export interface User {
+  id: string;
+  firstName: string;
+  lastName: string;
+  age: string;
+  active: boolean;
+}
+```
+
 ### Paso 7. Mostrar datos desde la API REST
 
 👤 Prompt:  
-Crea una función en el archivo #file:index.tsx que realice una solicitud GET a la URL `localhost:3000/user` para almacenar los datos en una variable y luego mostrar los datos en la pantalla, usa fetch.
+`@workspace Crea una función en el archivo #file:index.tsx que realice una solicitud GET a la URL localhost:3000/user para almacenar los datos en una variable y luego mostrar los datos en la pantalla, usa fetch para la solicitud`
 
 🤖 Respuesta de Copilot:  
 Para realizar una solicitud GET a la URL http://localhost:3000/users y mostrar los datos en la pantalla, puedes usar la API fetch en combinación con los hooks useEffect y useState de React. Aquí te explico cómo puedes modificar el archivo index.tsx para incluir esta funcionalidad:
@@ -268,7 +279,7 @@ export default function Index() {
 ```
 
 > [!WARNING]  
-> Reemplaza "localhost" por tu IP actual, ejemplo: http://192.168.1.1:3000/users
+> Reemplaza "localhost" por tu IP actual si estas accediendo desde un emulador o dispositivo. Ejemplo: http://192.168.1.1:3000/users
 
 👤 Prompt:  
 `@workspace /new Crea un componente llamado UserCard. El componente debe mostrar los campos id, nombre completo, edad y activo, usa estilos de React Native para establecer algunos estilos.`
@@ -349,7 +360,7 @@ export default UserCard;
 ```
 
 👤 Prompt:  
-`Muéstrame cómo puedo mostrar los datos de la API en #file:index.tsx usando el componente SafeAreaView y el componente FlatList para mostrar todos los elementos usando UserCard.`
+`@workspace Cómo puedo mostrar los datos de la API en #file:index.tsx usando el componente SafeAreaView y el componente FlatList para mostrar todos los elementos usando #file:UserCard.tsx`
 
 🤖 Respuesta de Copilot:  
 Para mostrar los datos de la API utilizando los componentes `SafeAreaView` y `FlatList`, puedes seguir estos pasos:
@@ -427,7 +438,7 @@ const styles = StyleSheet.create({
 ### Paso 8: Crear otra pestaña con un formulario para enviar datos a la API REST.
 
 👤 Prompt:  
-`@workspace Muéstrame cómo crear una nueva pestaña llamada "enroll"`
+`@workspace Muéstrame cómo crear una nueva tab llamada "enroll" utiliza el archivo de layout #file:_layout.tsx`
 
 🤖 Respuesta de Copilot:
 
@@ -441,7 +452,7 @@ Paso 1: Crear la pantalla de inscripción
 Crea un nuevo archivo llamado `enroll.tsx` en la carpeta `tabs`:
 
 ```tsx
-// app/tabs/enroll.tsx
+// app/enroll.tsx
 
 import React from "react";
 
@@ -474,7 +485,7 @@ Paso 2: Actualizar el Diseño de la Pestaña
 Actualiza el archivo `_layout.tsx` en la carpeta `tabs` para incluir la nueva pestaña "enroll":
 
 ```tsx
-// app/tabs/_layout.tsx
+// app/_layout.tsx
 
 import { Tabs } from "expo-router";
 import React from "react";
@@ -521,7 +532,7 @@ export default function TabLayout() {
 ```
 
 👤 Prompt:
-`@workspace Muéstrame cómo crear un formulario que tenga los mismos campos que mi interfaz de usuario y que, al enviarlo, realice una llamada POST a la API en /users`
+`@workspace Muéstrame cómo crear un formulario que tenga los mismos campos que mi interfaz de usuario dentro del archivo #file:types.ts y que, al enviarlo, realice una llamada POST a la API en /users`
 
 🤖 Respuesta de Copilot:
 Para crear un formulario que coincida con tu interfaz de usuario y realice una llamada POST a usuarios al enviarlo, sigue estos pasos:
@@ -764,7 +775,7 @@ En este código, la función `toggleActiveStatus` envía una solicitud PUT a la 
 ### Paso 10. Eliminar un elemento de la lista
 
 👤 Prompt:
-`@workspace en el archivo UserCard.tsx añade una función que, cuando el usuario mantenga presionada la tarjeta, muestre una alerta preguntando "¿estás seguro de eliminar el elemento?", si es así, envía una llamada HTTP a la API con el método DELETE, utiliza el componente Pressable de RN`
+`@workspace en el archivo #file:UserCard.tsx añade una función que, cuando el usuario mantenga presionada la tarjeta, muestre una alerta preguntando "¿estás seguro de eliminar el elemento?", si es así, envía una llamada HTTP a la API con el método DELETE, utiliza el componente Pressable de RN`
 
 🤖 Respuesta de Copilot:
 Claro, aquí está el archivo UserCard.tsx actualizado con la función para manejar la presión prolongada y eliminar al usuario:
@@ -1049,7 +1060,7 @@ El componente `FlatList` renderiza los datos del usuario desde el estado global.
 ### Usar funciones de Zustand
 
 👤 Prompt:
-`@workspace lee el #archivo:store.ts y el #archivo:UserCard.tsx y crea una función para actualizar el campo active usando zustand`
+`@workspace lee los archivos #file:store.ts, #file:UserCard.tsx y crea una función para actualizar el campo active usando zustand`
 
 🤖 Respuesta de Copilot:
 Para actualizar el campo active usando Zustand, necesitas agregar una función en la tienda de Zustand para actualizar el estado activo de un usuario específico. Luego, puedes llamar a esta función desde el componente UserCard.
@@ -1381,3 +1392,8 @@ describe("UserCard", () => {
 
 Puedes ejecutar las pruebas utilizando el siguiente comando:
 `npm test`
+
+## Tareas:
+
+1. Utilizar GitHub Copilot para hacer que el formulario de creación de usuario sea reactivo.
+2. Utilizar GitHub Copilot para hacer que el eliminado de usuario sea reactivo.
